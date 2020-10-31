@@ -13486,7 +13486,7 @@ body.authentication-bg-im {
 }
 
 .optional {
-  color: #fff;
+  color: #AA13EB;
 }
 
 .custom-control-label{
@@ -16866,3 +16866,52 @@ body[data-leftbar-theme=dark] .side-nav .side-nav-forth-level li.active>a, body[
   font-family: Nunito, sans-serif !important;
   font-weight: 700 !important
 }
+
+
+// ---------------- imput // ----------------
+
+.am-material-ui {
+    position: relative;
+}
+
+.am-material-ui .input {
+    position: relative;
+    padding-bottom: 45px;
+}
+
+.am-material-ui .input input{
+    border-radius: 10px;
+    border: solid 2px #AA13EB;
+    padding: 20px;
+    width: 300px;
+    height: 15px;
+}
+
+.am-material-ui .input input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.am-material-ui .input text1  {
+    background-color: white;
+    position: absolute;
+    left: 20px;
+    top: -8px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: "Roboto";
+    font-size: 14px;
+    color: #AA13EB;
+
+}
+
+.am-material-ui .input text2  {
+    font-size: 13px;
+    position: absolute;
+    left: 6px;
+    top: 48px;
+    font-family: "Roboto";
+    color: #C15AED;
+}
+
+// ---------------- imput // ----------------
