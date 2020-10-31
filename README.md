@@ -1,6 +1,6 @@
-## Me de um Sinal
+## Acord Music
 
-Me de um Sinal e um software para aprendizagem de libras, utilizando uma metodologia de gamificação, 
+Acord Music e um software para aprendizagem de libras, utilizando uma metodologia de gamificação, 
 cheios de atividades interativas e descontraida para poder aumentar o maximo a capacidade de ensino.
 Ele possou um integração com uma IA, onde ele faz o procesarmento de video em tempo real, para poder 
 Validade se o gerto com a mao corresponde com a lição dada pelo app.
