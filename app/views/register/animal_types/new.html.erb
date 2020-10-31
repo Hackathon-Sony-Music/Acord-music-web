@@ -1,0 +1,31 @@
+<div class="container-fluid limit_container">
+
+  <div class="page-title-box">
+    <div class="page-title-right">
+      <ol class="breadcrumb m-0">
+        <li class="breadcrumb-item">
+          <a href="/">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="/">Tipos de Animais</a>
+        </li>
+        <li class="breadcrumb-item active">Novo Tipos de Animais</li>
+      </ol>
+    </div>
+    <h2 class="page-title">Cadastros</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card shadow">
+        <div class="card-body">
+          <div class="row head-row">
+            <h4 class="header-title">Criar novo Tipo de Animais</h4>
+          </div>
+          <%= render 'form', register_animal_type: @register_animal_type, back_url: register_animal_types_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

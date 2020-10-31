@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @files_file.data %>
+</p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @files_file.filename %>
+</p>
+
+<p>
+  <strong>Mime type:</strong>
+  <%= @files_file.mime_type %>
+</p>
+
+<%= link_to 'Edit', edit_files_file_path(@files_file) %> |
+<%= link_to 'Back', files_files_path %>

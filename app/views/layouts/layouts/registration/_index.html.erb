@@ -1,0 +1,22 @@
+<div class="container-fluid limit_container">
+  <div class="page-title-box">
+    <div class="page-title-right">
+      <ol class="breadcrumb m-0">
+        <li class="breadcrumb-item">
+          <a href="/">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Tipos de <%= nme_modulo%></li>
+      </ol>
+    </div>
+    <h2 class="page-title">Cadastros</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <%= render "layouts/layouts/search", url_form: url_form,
+                                           form_search: url_form_search,
+                                           data: data_search  %>
+      <%= render url_list_grid %>
+    </div>
+  </div>
+</div>

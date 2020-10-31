@@ -1,0 +1,31 @@
+<div class="container-fluid limit_container">
+
+  <div class="page-title-box">
+    <div class="page-title-right">
+      <ol class="breadcrumb m-0">
+        <li class="breadcrumb-item">
+          <a href="/">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="<%= register_financeiro_food_types_path %>">Tipos de Alimentos</a>
+        </li>
+        <li class="breadcrumb-item active">Novo Tipos de Alimento</li>
+      </ol>
+    </div>
+    <h2 class="page-title">Cadastros</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card shadow">
+        <div class="card-body">
+          <div class="row head-row">
+            <h4 class="header-title">Criar novo Tipo de Alimento</h4>
+          </div>
+          <%= render 'form', register_financeiro_food_type: @register_financeiro_food_type, back_url: register_financeiro_food_types_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

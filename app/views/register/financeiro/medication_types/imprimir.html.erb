@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <style>
+      @media print {
+        .new-page {
+          page-break-before: always;
+        }
+      }
+    </style>
+  </head>
+
+  <body >
+    <%= render 'layouts/layouts/cabecario_pdf', nme_relatorio: Register::Financeiro::MedicationType.human_attribute_name(:nme_modulo)%>
+    <div class="table-responsive-sm">
+      <table class="table table-striped table-bordered table-centered table-sm mb-0">
+        <thead class="thead-light">
+          <tr>
+            <th>Tipo de Medicamento</th>
+            <th>Descrição</th>
+            <th>Observaçōes</th>
+            <th>Açōes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @register_financeiro_medication_types.each do |register_financeiro_medication_type| %>
+            <tr>
+              <td><%= register_financeiro_medication_type.nme_medication %></td>
+              <td><%= register_financeiro_medication_type.description %></td>
+              <td><%= register_financeiro_medication_type.obs %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+  </body>
+</html>

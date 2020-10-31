@@ -1,0 +1,1 @@
+json.partial! "register_financeiro_medication_types/register_financeiro_medication_type", register_financeiro_medication_type: @register_financeiro_medication_type

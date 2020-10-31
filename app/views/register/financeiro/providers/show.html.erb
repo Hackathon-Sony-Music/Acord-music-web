@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nme provider:</strong>
+  <%= @register_financeiro_provider.nme_provider %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @register_financeiro_provider.email %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @register_financeiro_provider.telephone %>
+</p>
+
+<p>
+  <strong>Nme empresa:</strong>
+  <%= @register_financeiro_provider.nme_empresa %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @register_financeiro_provider.description %>
+</p>
+
+<p>
+  <strong>Obs:</strong>
+  <%= @register_financeiro_provider.obs %>
+</p>
+
+<%= link_to 'Edit', edit_register_financeiro_provider_path(@register_financeiro_provider) %> |
+<%= link_to 'Back', register_financeiro_providers_path %>

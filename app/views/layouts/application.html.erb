@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Me de Um Sinal</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%=  render "layouts/nav_bar" if user_signed_in? && !current_user.tip_menu %>
+    <%=  render "layouts/nav_bar_financeiro" if user_signed_in? && current_user.tip_menu %>
+    <%= yield %>
+    <%=  render "layouts/flash_message" if user_signed_in? %>
+  </body>
+</html>

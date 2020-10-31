@@ -1,0 +1,26 @@
+<%= form_with(model: data, local: true) do |form| %>
+
+<%= render "/layouts/layouts/message_error", obj: data  %>
+
+  <div class="form-group col-6 pl-0">
+    <%= form.label Register::Financeiro::FoodType.human_attribute_name(:nme_food) %>
+    <%= form.text_field :nme_food, class:"form-control" %>
+  </div>
+
+  <div class="row col-12">
+    <div class="form-group col-6 pl-0">
+      <%= form.label Register::Financeiro::FoodType.human_attribute_name(:description) %>
+      <%= form.text_area :description, class:"form-control" %>
+    </div>
+
+    <div class="form-group col-6 pl-0">
+      <%= form.label Register::Financeiro::FoodType.human_attribute_name(:obs) %>
+      <%= form.text_area :obs, class:"form-control" %>
+    </div>
+  </div>
+  <div class="actions row btn-row">
+    <%= link_to 'Cancelar', back_url, class:"btn btn-secondary" if back_url.present? %>
+    <%= form.submit "Salvar", class:"btn btn-success ml"  %>
+  </div>
+
+<% end %>

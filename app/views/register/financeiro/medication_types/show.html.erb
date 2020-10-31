@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nme medication:</strong>
+  <%= @register_financeiro_medication_type.nme_medication %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @register_financeiro_medication_type.description %>
+</p>
+
+<p>
+  <strong>Obs:</strong>
+  <%= @register_financeiro_medication_type.obs %>
+</p>
+
+<%= link_to 'Edit', edit_register_financeiro_medication_type_path(@register_financeiro_medication_type) %> |
+<%= link_to 'Back', register_financeiro_medication_types_path %>

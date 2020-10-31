@@ -1,0 +1,113 @@
+wb = xlsx_package.workbook
+
+wb.styles do |s|
+  heading = s.add_style alignment: {horizontal: :center, wrap_text: true,  vertical: :center},
+                                    b: true, bg_color: "eeeeee",
+                                    border: {style: :thin, color: "000000"}
+
+  border = s.add_style border: {style: :thin, color: "000000"},
+                       alignment: {horizontal: :center, wrap_text: true,  vertical: :center}
+
+  negrito = s.add_style b: true
+  wrap = s.add_style alignment: {horizontal: :center, wrap_text: true, vertical: :center},
+                                b: true
+
+  wb.add_worksheet(name: "Estrut. Remuneratória") do |sheet|
+
+    img = File.expand_path('../../../../assets/images/logo_orgao.png', __FILE__)
+
+    sheet.add_image(:image_src => img) do |image|
+    image.width=354
+    image.height=80
+    image.start_at 4, 0
+    end
+
+    sheet.add_row ['']
+    sheet.add_row ['']
+    sheet.add_row ['']
+    sheet.add_row ['']
+    sheet.add_row ['']
+
+    sheet.merge_cells "A6:P6"
+    sheet.merge_cells "A7:P7"
+
+    sheet.merge_cells "G8:K8"
+    sheet.merge_cells "G9:H9"
+
+    sheet.merge_cells "A8:A10"
+    sheet.merge_cells "B8:B10"
+    sheet.merge_cells "C8:C10"
+    sheet.merge_cells "D8:D10"
+
+    sheet.merge_cells "F8:F9"
+
+    sheet.merge_cells "L8:P9"
+
+    sheet.add_row ["#{Transparencia::TbAnexoIiiA.human_attribute_name(:id).upcase} (#{Transparencia::TbAnexoIiiA::NOME_ANEXO_A.upcase})", '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
+           style: [ heading, heading, heading, heading, heading, heading, heading, heading, heading, heading, heading, heading, heading, heading, heading, heading], widths: [:ignore, :auto], :height => 45
+
+    sheet.add_row ['Referência: ' "#{MESES_BRASILEIROS[@mes.to_i-1][0]}/#{@ano.to_i}", '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
+           style: [ heading, heading, heading, heading, heading, heading, heading, heading, heading, heading, heading, heading, heading, heading, heading, heading], widths: [:ignore, :auto], :height => 45
+
+    sheet.add_row ['Cargo', 'Classe' , 'Padrão', 'Vencimento Básico', 'GA III (TS)', 'GAJ (Gratificação judiciaria)', 'GIF (AQ)', '', '', '', '', 'Adicional de Capacitação', '', '', '', ''], style: heading
+
+    sheet.add_row ['', '' , '', '', '(cada 5 anos)', '', 'Graduação', '', 'Pós-Graduação', 'Mestrado', 'Doutorado', '', '', '', '', ''], style: heading
+    sheet.add_row ['', '' , '', '', '5%', '25%', '20%', '25%', '10%', '20%', '30%', '2%', '4%', '6%', '8%', '10%'], style: heading
+
+
+    num_linha = 11
+    @transparencia_tb_anexo_iii_as.group_by {|x| x[:nme_cargo]}.each do |anexo|
+
+        sheet.merge_cells "A#{num_linha}:A#{num_linha+anexo[1].size-1}"
+        num_linha += anexo[1].size
+
+        anexo_first = anexo[1].first
+
+        sheet.add_row [anexo_first.nme_cargo,
+                       anexo_first.classe,
+                       anexo_first.nivel,
+                       formata_valor_real(anexo_first.valor_vencimento),
+                       formata_valor_real(anexo_first.valor_ga_5),
+                       formata_valor_real(anexo_first.valor_gaj_25),
+                       formata_valor_real(anexo_first.valor_gif_graduacao_20),
+                       formata_valor_real(anexo_first.valor_gif_graduacao_25),
+                       formata_valor_real(anexo_first.valor_gif_pos_10),
+                       formata_valor_real(anexo_first.valor_gif_mestrado_20),
+                       formata_valor_real(anexo_first.valor_gif_doutorado_30),
+                       formata_valor_real(anexo_first.valor_add_cap_2),
+                       formata_valor_real(anexo_first.valor_add_cap_4),
+                       formata_valor_real(anexo_first.valor_add_cap_6),
+                       formata_valor_real(anexo_first.valor_add_cap_8),
+                       formata_valor_real(anexo_first.valor_add_cap_10)
+        ], style: border, :height => 50
+
+        anexo[1].drop(1).group_by {|x| x[:classe]}.each do |classe|
+            classe[1].each_with_index do |line, index|
+                sheet.add_row ['',
+                               classe[0],
+                               line.nivel,
+                               formata_valor_real(line.valor_vencimento),
+                               formata_valor_real(line.valor_ga_5),
+                               formata_valor_real(line.valor_gaj_25),
+                               formata_valor_real(line.valor_gif_graduacao_20),
+                               formata_valor_real(line.valor_gif_graduacao_25),
+                               formata_valor_real(line.valor_gif_pos_10),
+                               formata_valor_real(line.valor_gif_mestrado_20),
+                               formata_valor_real(line.valor_gif_doutorado_30),
+                               formata_valor_real(line.valor_add_cap_2),
+                               formata_valor_real(line.valor_add_cap_4),
+                               formata_valor_real(line.valor_add_cap_6),
+                               formata_valor_real(line.valor_add_cap_8),
+                               formata_valor_real(line.valor_add_cap_10)
+                        ], style: border, :height => 50
+            end
+        end
+    end
+
+
+    col_widths= [50,20,20,20,20,20,20,20,20,20,15,15,15,15,15]
+    sheet.column_widths *col_widths
+
+  end
+
+end

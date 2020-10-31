@@ -1,0 +1,33 @@
+<%= form_with(model: files_file, local: true) do |form| %>
+  <% if files_file.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(files_file.errors.count, "error") %> prohibited this files_file from being saved:</h2>
+
+      <ul>
+        <% files_file.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="form-group" style="max-width:300px;">
+    <%= form.label 'Arquivo' %>
+    <div class="form-group">
+      <div class="input-group">
+        <input type="text" class="form-control" readonly="readonly">
+        <div class="input-group-btn">
+          <span class="fileUpload btn btn-success">
+            <span class="upl" id="upload">Salvar Arquivo</span>
+            <%= form.file_field :data, class:"upload up", id:"up", onchange:"readURL(this);" %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

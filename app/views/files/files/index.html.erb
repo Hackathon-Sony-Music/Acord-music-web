@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Files Files</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <!-- <th>Filename</th>
+      <th>Mime type</th> -->
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @files_files.each do |files_file| %>
+      <tr>
+        <td><%= image_tag(image_file(files_file), width: '100') if files_file.data.present? %></td>
+        <td><%# files_file.filename %></td>
+        <td><%# files_file.mime_type %></td>
+        <td><%= link_to 'Show', files_file %></td>
+        <td><%= link_to 'Edit', edit_files_file_path(files_file) %></td>
+        <td><%= link_to 'Destroy', files_file, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Files File', new_files_file_path %>

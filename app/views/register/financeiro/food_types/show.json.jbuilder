@@ -1,0 +1,1 @@
+json.partial! "register_financeiro_food_types/register_financeiro_food_type", register_financeiro_food_type: @register_financeiro_food_type

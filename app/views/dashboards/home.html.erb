@@ -1,0 +1,39 @@
+<body class="auth-fluid-pages pb-0">
+  <div class="row" style="background-color: #00000091;height: 60px;position: absolute;z-index: 25;width: 101%;padding: 10px;padding-left: 30px;">
+    <a class="navbar-brand" href="/dashboards/home" style="padding: 0;margin: 0;color:#ffff">
+      <img src="<%= asset_path 'logo_m.png' %>" width="50">
+      Signal
+    </a>
+
+    <%= link_to new_user_session_path, class:"btn btn-primary btn-block mr-3", style:"width: 13rem;border-radius: 23px;height: 37px; margin-left:auto;" do %>
+    <i class="mdi mdi-login"></i>
+    Acessar
+  <% end %>
+
+  <%= link_to "Cadastre-se", new_user_registration_path, class:"btn btn-outline-dark btn-block", style:"margin-top: 0;height: 39px;width: 14rem;" %>
+
+</div>
+<div class="auth-fluid-botton">
+  <div class="auth-fluid-form-box-booton">
+    <div class="align-items-center d-flex h-100">
+      <div class="card-body">
+
+        <h2 class="mt-0" style="text-align: center;color: #fff;">
+          Comunicação, acessibilidade e conscientização.
+        </h2>
+        <h3 class="mt-0" style="text-align: center;color: #fff;">
+          Apreenda Libras de maneira Fácil e Ágil.
+        </h3>
+        <h2 class="mt-0" style="text-align: center;color: #fff;">
+          Me da um Sinal
+        </h2>
+        <div class="row mt-3 form-group mb-0 text-center">
+          <%= link_to new_user_session_path, class:"btn btn-primary btn-block", style:"width:8rem; border-radius: 32px;margin-left:auto;margin-right:auto;" do %>
+          Comece
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>

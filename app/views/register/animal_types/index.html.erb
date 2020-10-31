@@ -1,0 +1,23 @@
+
+<div class="container-fluid limit_container">
+  <div class="page-title-box">
+    <div class="page-title-right">
+      <ol class="breadcrumb m-0">
+        <li class="breadcrumb-item">
+          <a href="/">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Tipos de Animais</li>
+      </ol>
+    </div>
+    <h2 class="page-title">Cadastros</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <%= render "layouts/layouts/search", url_form:register_animal_types_path,
+                                           form_search: 'register/animal_types/search_form',
+                                           data: @register_animal_type_search  %>
+      <%= render "register/animal_types/list_grid" %>
+    </div>
+  </div>
+</div>

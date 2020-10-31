@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-green">
+  <a class="navbar-brand" href="/">
+    <img src="<%= asset_path 'logo_p_white.png' %>" width="100">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Cadastros&nbsp;<span class="fa fa-angle-down"></span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "Tipo de Alimento", register_financeiro_food_types_path, method: "get", class:"dropdown-item" %>
+          <%= link_to "Tipo de Medicamento", register_financeiro_medication_types_path, method: "get", class:"dropdown-item" %>
+          <%= link_to "Tipo de Fornecedor", register_financeiro_providers_path, method: "get", class:"dropdown-item" %>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Compras&nbsp;<span class="fa fa-angle-down"></span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "Insumo", register_animal_types_path, method: "get", class:"dropdown-item" %>
+          <%= link_to "Medicamento", register_animal_types_path, method: "get", class:"dropdown-item" %>
+          <%= link_to "Animais", register_animal_types_path, method: "get", class:"dropdown-item" %>
+        </div>
+      </li>
+    </ul>
+
+    <div style="margin-left: auto;margin-right: auto;">
+      <span class="badge-lg badge-info-lighten piscar">Modulo: Financeiro</span>
+    </div>
+
+    <div class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          style="display: flex;align-items: center;padding-left: 0.1rem;padding: 0.1rem!important;">
+            <img class="mr-1 rounded-circle" src="<%= image_user() %>" width="40" height="40" alt="Generic placeholder image">
+            <h5 class="mt-0 mb-1"><%= name_user() %>&nbsp;<span class="fa fa-angle-down"></span></h5>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to "Configuraçōes", edit_users_user_path(current_user.id), method: "get", class:"dropdown-item" %>
+            <div class="dropdown-divider"></div>
+            <%= link_to "Modulo Gerenciamento", troca_mudulo_dashboards_path(), method: "get", class:"dropdown-item" %>
+            <div class="dropdown-divider"></div>
+            <%= link_to "Sair", destroy_user_session_path, method: "delete", class:"dropdown-item" %>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,42 @@
+<%= form_with(model: data, local: true) do |form| %>
+
+  <%= render "/layouts/layouts/message_error", obj: data  %>
+
+  <div class="row col-12">
+    <div class="form-group col-6 pl-0">
+      <%= form.label :nme_provider %>
+      <%= form.text_field :nme_provider, class:"form-control" %>
+    </div>
+
+    <div class="form-group col-6 pl-0">
+      <%= form.label :nme_empresa %>
+      <%= form.text_field :nme_empresa, class:"form-control" %>
+    </div>
+
+    <div class="form-group col-6 pl-0">
+      <%= form.label :email %>
+      <%= form.text_field :email, class:"form-control" %>
+    </div>
+
+    <div class="form-group col-6 pl-0">
+      <%= form.label :telephone %>
+      <%= form.text_field :telephone, class:"form-control" %>
+    </div>
+
+
+    <div class="form-group col-6 pl-0">
+      <%= form.label :description %>
+      <%= form.text_area :description, class:"form-control" %>
+    </div>
+
+    <div class="form-group col-6 pl-0">
+      <%= form.label :obs %>
+      <%= form.text_area :obs, class:"form-control" %>
+    </div>
+  </div>
+
+  <div class="actions row btn-row">
+    <%= link_to 'Cancelar', back_url, class:"btn btn-secondary" if back_url.present? %>
+    <%= form.submit "Salvar", class:"btn btn-success ml"  %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<% if flash.present? %>
+  <div class="jq-toast-wrap top-right" id="flash_menssage" style="display:;">
+    <div class="jq-toast-single jq-has-icon jq-icon-info <%=flash.first.first%>" style="text-align: left;">
+      <div class="toast-header">
+          <button type="button" class="ml-2 close" data-dismiss="toast" aria-label="Close" onclick="$('#flash_menssage').fadeOut()">
+            <span aria-hidden="true">×</span>
+          </button>
+      </div>
+      <ul class="jq-toast-ul">
+        <% flash.each do |type, msg| %>
+          <li class="jq-toast-li" id="jq-toast-item-0"><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+      $(function(){
+          $("#flash_menssage").fadeIn(1600, function(){
+              window.setTimeout(function(){
+                  $('#flash_menssage').fadeOut( 1600, "linear");
+              }, 10000);
+          });
+      });
+  </script>
+
+<% end %>

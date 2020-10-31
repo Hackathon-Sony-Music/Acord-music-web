@@ -1,0 +1,47 @@
+<div class="card shadow">
+  <div class="card-body pt-2 pb-2">
+    <div class="row head-row mb-2">
+      <h4 class="header-title">Filtro</h4>
+      <a class="ml menu_search" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="">
+        <i class="mdi mdi-menu-open" style="font-size: 1.6rem;"></i>
+      </a>
+    </div>
+    <div class="collapse" id="collapseExample">
+      <%= form_with(model: data, url:url_form, method: :get, local: true) do |form| %>
+
+
+        <%= render form_search, form: form %>
+
+        <%= hidden_field_tag :tipo_relatorio %>
+        <%= hidden_field_tag :format, 'html' %>
+
+        <div class="actions row btn-row">
+          <%= form.submit "Filtrar", class:"btn btn-success ml submit", onclick: "$('#format').val('html');$('#tipo_relatorio').val('html');"  %>
+          <%= link_to "Limpar Filtro",'javascript:void(0)', class:"btn btn-outline-secondary ml-2 mr-2", onclick:'clear_search()'  %>
+          <%= render 'layouts/layouts/botoes_imprimir' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function clear_search()
+  {
+    array = document.getElementsByClassName('form-control')
+    for (var i = 0; i < array.length; i++) {
+      array[i].value = ''
+    }
+    $('.submit').click()
+  }
+
+  array = document.getElementsByClassName('form-control')
+  verifica = false
+  for (var i = 0; i < array.length && !verifica; i++) {
+    if (array[i].value != null && array[i].value != '' ) {
+      verifica = true
+      $('.menu_search')[0].click()
+    }
+  }
+
+</script>

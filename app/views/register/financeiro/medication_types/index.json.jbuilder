@@ -1,0 +1,1 @@
+json.array! @register_financeiro_medication_types, partial: "register_financeiro_medication_types/register_financeiro_medication_type", as: :register_financeiro_medication_type

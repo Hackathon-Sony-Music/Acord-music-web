@@ -1,0 +1,55 @@
+<div id="detached-topbar-placeholder"></div>
+
+<div class="wrapper">
+  <div class="content-page">
+    <div class="content">
+
+      <div id="vertical-topbar-placeholder"></div>
+      <div id="horizontal-topbar-placeholder"></div>
+
+      <div class="container-fluid mt-5">
+        <div class="row">
+          <div class="col-md-12 col-xl-2 mr-5">
+            <img src="<%= asset_path 'macaco_2.svg' %>" style="margin-left: -19vh;margin-top: -14vh;">
+          </div>
+          <div class="col-md-12 col-xl-9">
+            <div class="progress mb-2">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 50%;background-color: #235390 !important;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+            <div class="col-12">
+              <h1 style="color:#000">Sinalise:</h1>
+              <h3 class="ml-5" style="color:#000">Hoje está Chuvendo.</h3>
+            </div>
+
+            <div class="col-12 row">
+              <div class="card mlr" style="width: 500px;height: 400px;">
+                <div class="card-body">
+                  <img class="image-center" src="<%= asset_path 'camera.svg' %>">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <h3 class="ml-4" style="color:#000">Frase Capturada:_____________________________________.</h3>
+            </div>
+
+            <div class="col-12 row mt-3">
+              <%= link_to exercios_incorreto_dashboards_path, class:"btn btn-secondary", style:"width: 13rem;border-radius: 23px;height: 37px;" do %>
+                Pular
+              <% end %>
+              <%= link_to exercios_correto_dashboards_path, class:"btn btn-primary", style:"width: 13rem;border-radius: 23px;height: 37px; margin-left:auto;" do %>
+                Verificar
+              <% end %>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<%= javascript_pack_tag 'dashboard.js' %>

@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-blue" style="padding-left:50px;padding-right:50px;height: 60px;">
+  <a class="navbar-brand" href="/" style="color:#fff;">
+    <img src="<%= asset_path 'logo_m.png' %>" width="50">
+    Signal
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto" style="margin-left:auto;margin-right:auto;">
+      <li class="nav-item ml-3">
+        <a class="nav-link" href="#">
+          <img src="<%= asset_path 'licao_1.svg' %>" width="40">
+          Apreender
+        </a>
+      </li>
+      <li class="nav-item ml-3">
+        <a class="nav-link" href="#">
+          <img src="<%= asset_path 'protesto_1.svg' %>" width="40">
+          Comunidade
+        </a>
+      </li>
+      <li class="nav-item ml-3">
+        <a class="nav-link" href="#">
+          <img src="<%= asset_path 'lista_1.svg' %>" width="30">
+          Mais
+        </a>
+      </li>
+
+    </ul>
+
+    <div class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          style="display: flex;align-items: center;padding-left: 0.1rem;padding: 0.1rem!important;">
+            <img class="mr-1 rounded-circle" src="<%= image_user() %>" width="40" height="40" alt="Generic placeholder image">
+            <h5 class="mt-0 mb-1"><%= name_user() %>&nbsp;<span class="fa fa-angle-down"></span></h5>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to "Configuraçōes", edit_users_user_path(current_user.id), method: "get", class:"dropdown-item" %>
+            <div class="dropdown-divider"></div>
+            <%= link_to "Modulo Financeiro", troca_mudulo_dashboards_path(), method: "get", class:"dropdown-item" %>
+            <div class="dropdown-divider"></div>
+            <%= link_to "Sair", destroy_user_session_path, method: "delete", class:"dropdown-item" %>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

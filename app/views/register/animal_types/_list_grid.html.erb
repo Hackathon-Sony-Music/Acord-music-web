@@ -1,0 +1,52 @@
+<div class="card shadow">
+  <div class="card-body">
+    <div class="row head-row">
+      <h4 class="header-title">Tipos de Animais</h4>
+      <%= link_to 'Novo', new_register_animal_type_path, class:"header-title btn btn-success" %>
+    </div>
+
+    <div class="table-responsive-sm">
+      <table class="table table-striped table-centered mb-0">
+        <thead>
+          <tr>
+            <th>Tipo de Animal</th>
+            <th>Observaçōes</th>
+            <th>Imagem</th>
+            <th>Açōes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @register_animal_types.each do |register_animal_type| %>
+            <tr>
+              <td><%= register_animal_type.nme_animal %></td>
+              <td>
+                <%# register_animal_type.obs %>
+              </td>
+              <td>
+                <% if register_animal_type.obs.present? %>
+                  <img src="data:image/png;base64,<%= register_animal_type.obs %>"/>
+                <% else %>
+                  <%= image_tag register_animal_type.image if register_animal_type.image.present? %>
+                <% end %>
+              </td>
+              <td class="table-action">
+                <% link_to register_animal_type, class:"action-icon" do %>
+                  <i class="mdi mdi-eye-circle-outline"></i>
+                <% end %>
+
+                <%= link_to edit_register_animal_type_path(register_animal_type), class:"action-icon" do %>
+                  <i class="mdi mdi-pencil"></i>
+                <% end %>
+
+                <%= link_to register_animal_type, class:"action-icon", method: :delete do %>
+                  <i class="mdi mdi-delete"></i>
+                <% end %>
+
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

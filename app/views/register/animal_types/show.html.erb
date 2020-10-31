@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nme animal:</strong>
+  <%= @register_animal_type.nme_animal %>
+</p>
+
+<p>
+  <strong>Obs:</strong>
+  <%= @register_animal_type.obs %>
+</p>
+
+<%= link_to 'Edit', edit_register_animal_type_path(@register_animal_type) %> |
+<%= link_to 'Back', register_animal_types_path %>

@@ -1,0 +1,50 @@
+<div class="card shadow">
+  <div class="card-body">
+    <div class="row head-row">
+      <h4 class="header-title">Fornecedores</h4>
+      <%= link_to 'Novo', new_register_financeiro_provider_path, class:"header-title btn btn-success" %>
+    </div>
+
+    <div class="table-responsive-sm">
+      <table class="table table-striped table-centered mb-0">
+        <thead>
+          <tr>
+            <th>Nome Fornecedores</th>
+            <th>Nome Empresa</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Descrição</th>
+            <th>Observaçōes</th>
+            <th>Açōes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @register_financeiro_providers.each do |register_financeiro_provider| %>
+            <tr>
+              <td><%= register_financeiro_provider.nme_provider %></td>
+              <td><%= register_financeiro_provider.nme_empresa %></td>
+              <td><%= register_financeiro_provider.email %></td>
+              <td><%= register_financeiro_provider.telephone %></td>
+              <td><%= register_financeiro_provider.description %></td>
+              <td><%= register_financeiro_provider.obs %></td>
+              <td class="table-action">
+                <% link_to register_financeiro_provider, class:"action-icon" do %>
+                  <i class="mdi mdi-eye-circle-outline"></i>
+                <% end %>
+
+                <%= link_to edit_register_financeiro_provider_path(register_financeiro_provider), class:"action-icon" do %>
+                  <i class="mdi mdi-pencil"></i>
+                <% end %>
+
+                <%= link_to register_financeiro_provider, class:"action-icon", method: :delete do %>
+                  <i class="mdi mdi-delete"></i>
+                <% end %>
+
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
