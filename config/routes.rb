@@ -47,6 +47,7 @@ end
 resources :registrations do
   collection do
     get :box_1
+    get :box_1_1
   end
 end
 

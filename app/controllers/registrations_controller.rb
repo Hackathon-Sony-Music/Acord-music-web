@@ -4,4 +4,7 @@ class RegistrationsController < ApplicationController
   def box_1
   end
 
+  def box_1_1
+  end
+
 end
