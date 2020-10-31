@@ -194,9 +194,16 @@ a {
 }
 
 a:hover {
-  color: #437432;
+  color: rgba(187, 134, 252, 0.38);
   text-decoration: none
 }
+
+.option:hover {
+    color: #ffff!important;
+    text-decoration: none!important;
+    background-color: #65038f!important;
+  }
+
 
 a:not([href]):not([tabindex]) {
   color: inherit;
@@ -13462,6 +13469,26 @@ body.authentication-bg-im {
   -ms-flex-align: stretch;
   align-items: stretch;
   background: url("images/bg-auto.png") center;
+  background-size: cover
+}
+
+.auth-fluid-registration {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: url("images/auth-registration.png") center;
   background-size: cover
 }
 

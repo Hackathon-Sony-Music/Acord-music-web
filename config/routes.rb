@@ -44,4 +44,10 @@ resources :dashboards do
   end
 end
 
+resources :registrations do
+  collection do
+    get :box_1
+  end
+end
+
 end
