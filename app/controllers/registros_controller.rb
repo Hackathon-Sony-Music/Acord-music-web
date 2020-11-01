@@ -1,4 +1,4 @@
-class RegistrationsController < ApplicationController
+class RegistrosController < ApplicationController
   before_action :authenticate_user!, only: [:principal]
 
   def box_1
