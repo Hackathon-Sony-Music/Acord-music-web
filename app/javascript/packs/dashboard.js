@@ -197,7 +197,7 @@ options = {
     width: 2
   },
   series: [{
-    name: "Total Revenue",
+    name: "Total Receita",
     type: "area",
     data: [44, 55, 31, 47, 31, 43, 26, 41, 31, 47, 33, 43]
   }, {
