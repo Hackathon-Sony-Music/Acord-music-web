@@ -50,6 +50,7 @@ resources :registros do
     get :box_1_1
     get :box_1_1_2
     get :box_1_1_3
+    get :box_1_1_4
     get :box_1_2
   end
 end
