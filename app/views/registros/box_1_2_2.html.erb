@@ -36,16 +36,13 @@
            ]
           %>
 
+        <%= form_with(model: current_user, url: box_1_1_2_update_registros_path, local: true) do |form| %>
           <div class="card" style="width: 350px;margin-left: auto;margin-right: auto;border-radius: 0px;border-bottom-left-radius: 0.75rem;border-bottom-right-radius: 0.75rem;">
             <div class="card-body p-3">
-              <%= form_with(model: current_user, url: box_1_1_2_update_registros_path, local: true) do |form| %>
                 <%= form.select :category_id, @pais.collect {|p| [ p, p ] },
-                             {  },
-                             { class: 'form-control select2-multiple', multiple: true, 'data-placeholder':"Selecione o estilo ..."}
-                               %>
+                             {  },{ class: 'form-control select2-multiple', multiple: true, 'data-placeholder':"Selecione o estilo ..."} %>
             </div>
           </div>
-
           <%= form.submit "Avançar", class:"btn btn-primary btn-block",
                                     style:"width:8rem; border-radius: 32px;margin-left:auto;margin-right:auto;box-shadow: 2px 3px 17px 11px rgb(248 249 249 / 50%);"  %>
         <% end %>

@@ -12,9 +12,9 @@
             </div>
           </div>
 
+        <%= form_with(model: current_user, url: box_1_1_update_registros_path, local: true) do |form| %>
           <div class="card" style="width: 350px;margin-left: auto;margin-right: auto;border-radius: 0.75rem;">
             <div class="card-body p-2">
-              <%= form_with(model: current_user, url: box_1_1_update_registros_path, local: true) do |form| %>
                 <%= form.text_field :name, class:"form-control",
                                            placeholder:"Digite seu nome",
                                            style:"border-width:0px;border:none;box-shadow: none;",
