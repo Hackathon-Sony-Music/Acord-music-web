@@ -16,11 +16,13 @@ module ApplicationHelper
   end
 
   def name_user
-    if current_user.user_name.present?
-      current_user.user_name
+    if current_user.name.present?
+      current_user.name
     else
-      current_user.email
+      # current_user.email
+      'Sony Music'
     end
+
   end
 
 end
