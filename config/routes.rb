@@ -27,9 +27,16 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
 
+  # resources :users do
+  #   collection do
+  #     get :update_dados_registros
+  #   end
+  # end
   namespace :users do
     resources :users, only: [ :edit, :update]
   end
+
+
 
 resources :dashboards do
   collection do
@@ -46,6 +53,7 @@ end
 
 resources :registros do
   collection do
+    get :update_dados_registros
     get :box_1
     get :box_1_1
     get :box_1_1_2

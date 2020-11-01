@@ -26,5 +26,6 @@ class User < ApplicationRecord
    private
    def set_tip_menu
      self.tip_menu = self.tip_menu.present? ? self.tip_menu : false
+     self.registrations = self.registrations? ? self.registrations : false
    end
 end

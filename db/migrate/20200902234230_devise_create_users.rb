@@ -9,6 +9,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :email,              null: false, comment: "Email para autenticar e validação", unique: true
       t.string :encrypted_password, null: false, comment: "Senha para autenticar o login"
       t.boolean :tip_menu,          null: false, comment: "Define qual menu deve entrar."
+      t.boolean :registrations,     null: false, comment: "Define se ja passou pelo registro"
 
       ## Recoverable
       t.string   :reset_password_token

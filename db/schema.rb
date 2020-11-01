@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 2020_09_19_122225) do
     t.string "email", null: false, comment: "Email para autenticar e validação"
     t.string "encrypted_password", null: false, comment: "Senha para autenticar o login"
     t.boolean "tip_menu", null: false, comment: "Define qual menu deve entrar."
+    t.boolean "registrations", null: false, comment: "Define se ja passou pelo registro"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

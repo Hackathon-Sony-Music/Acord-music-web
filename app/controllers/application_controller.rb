@@ -1,5 +1,10 @@
 class ApplicationController < ActionController::Base
   add_flash_types :info, :danger, :warning
+  before_action :authenticate_registration!
+
+  def authenticate_registration!
+    redirect_to '/registros/box_1' if current_user && !current_user.registrations && params[:controller] != 'registros'
+  end
 
   def time_sistem
     Time.now.strftime("%Y/%m/%d_%H:%M:%S")
