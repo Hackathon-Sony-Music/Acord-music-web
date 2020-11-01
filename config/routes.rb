@@ -53,6 +53,7 @@ resources :dashboards do
     get :produtoras
     get :hits
     get :relatorios
+    get :letras
   end
 end
 
