@@ -64,6 +64,11 @@ resources :registros do
     get :box_1_2_2
     get :box_1_2_3
     get :box_1_2_4
+
+    # patch :
+    get :box_1_update
+    patch :box_1_1_update
+    patch :box_1_1_2_update
   end
 end
 

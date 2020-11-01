@@ -11,6 +11,16 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.boolean :tip_menu,          null: false, comment: "Define qual menu deve entrar."
       t.boolean :registrations,     null: false, comment: "Define se ja passou pelo registro"
 
+      t.boolean :editor,           null: false, comment: "Se e editor, caso nao seja e compositor/cantor"
+      t.string  :name,              null: false, comment: "Nome completo"
+      t.string  :categoria,         null: false, comment: "Estilo de musicas"
+      t.string  :pais,              null: false, comment: "Pais onde Vive"
+      t.string  :estado,            null: false, comment: "Estado onde Vive"
+      t.string  :cidade,            null: false, comment: "Cidade onde Vive"
+
+      t.string  :telefone,          null: false, comment: "Telefone"
+      t.string  :cpf_cjpj,          null: false, comment: "CPF ou CNPJ da pessoa"
+
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at

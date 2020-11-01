@@ -1,0 +1,57 @@
+<body class="auth-fluid-pages pb-0">
+  <div class="auth-fluid-registration">
+    <div class="container" style="margin-top: 15%">
+      <div class="row justify-content-center">
+        <div class="col-lg-5">
+
+          <div class="card shadow" style="margin-bottom: -3px;z-index: 10;border-radius: .75rem;">
+            <div class="card-body p-3">
+              <div class="text-center w-75 m-auto">
+                <h4 class="text-dark-50 text-center mt-0 font-weight-bold">Qual seu tipo de Musica?</h4>
+              </div>
+            </div>
+          </div>
+
+          <%
+          @pais = [
+             'Dance',
+             'Jazz',
+             'Pagode',
+             'Funk',
+             'Eletronica',
+             'Gospel',
+             'Rock',
+             'Hip hop',
+             'Heavy metal',
+             'Musica de camera',
+             'Blues',
+             'Sertanejo',
+             'Black',
+             'Rap',
+             'Musica folclorica',
+             'Erudita',
+             'Samba',
+             'Pop',
+              'Soul'
+           ]
+          %>
+
+          <div class="card" style="width: 350px;margin-left: auto;margin-right: auto;border-radius: 0px;border-bottom-left-radius: 0.75rem;border-bottom-right-radius: 0.75rem;">
+            <div class="card-body p-3">
+              <%= form_with(model: current_user, url: box_1_1_2_update_registros_path, local: true) do |form| %>
+                <%= form.select :category_id, @pais.collect {|p| [ p, p ] },
+                             {  },
+                             { class: 'form-control select2-multiple', multiple: true, 'data-placeholder':"Selecione o estilo ..."}
+                               %>
+            </div>
+          </div>
+
+          <%= form.submit "Avançar", class:"btn btn-primary btn-block",
+                                    style:"width:8rem; border-radius: 32px;margin-left:auto;margin-right:auto;box-shadow: 2px 3px 17px 11px rgb(248 249 249 / 50%);"  %>
+        <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
