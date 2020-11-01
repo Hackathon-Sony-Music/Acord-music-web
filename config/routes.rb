@@ -53,6 +53,7 @@ resources :registros do
     get :box_1_1_4
     get :box_1_2
     get :box_1_2_2
+    get :box_1_2_3
   end
 end
 
