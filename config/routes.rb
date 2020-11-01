@@ -48,6 +48,8 @@ resources :registros do
   collection do
     get :box_1
     get :box_1_1
+    get :box_1_1_2
+    get :box_1_2
   end
 end
 
