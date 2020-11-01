@@ -347,4 +347,4 @@ options = {
     }
   }]
 };
-(chart = new ApexCharts(document.querySelector("#dash-revenue-chart-2"), options)).render();
+(chart = new ApexCharts(document.querySelector("#dash-revenue-chart"), options)).render();
