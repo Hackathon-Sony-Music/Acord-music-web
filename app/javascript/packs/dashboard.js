@@ -11,7 +11,7 @@ var options1 = {
       columnWidth: "60%"
     }
   },
-  colors: ["#06AD21"],
+  colors: ["#C15AED"],
   series: [{
     data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54]
   }],
@@ -59,7 +59,7 @@ var options2 = {
   markers: {
     size: 0
   },
-  colors: ["#06AD21"],
+  colors: ["#C15AED"],
   tooltip: {
     fixed: {
       enabled: !1
@@ -93,7 +93,7 @@ var options3 = {
       columnWidth: "60%"
     }
   },
-  colors: ["#06AD21"],
+  colors: ["#C15AED"],
   series: [{
     data: [12, 14, 2, 47, 42, 15, 47, 75, 65, 19, 14]
   }],
@@ -136,7 +136,7 @@ var options4 = {
       columnWidth: "60%"
     }
   },
-  colors: ["#06AD21"],
+  colors: ["#C15AED"],
   series: [{
     data: [47, 45, 74, 14, 56, 74, 14, 11, 7, 39, 82]
   }],
@@ -171,7 +171,7 @@ var options = {
     height: 320,
     type: "radialBar"
   },
-  colors: ["#ffbc00", "#06AD21", "#0acf97"],
+  colors: ["#4E096B", "#C15AED", "#AA13EB"],
   series: [86, 36, 50],
   labels: ["Total Sent", "Reached", "Opened"],
   plotOptions: {
@@ -183,6 +183,104 @@ var options = {
   }
 };
 (chart = new ApexCharts(document.querySelector("#dash-campaigns-chart"), options)).render();
+
+
+// ----
+var options = {
+  chart: {
+    height: 320,
+    type: "radialBar"
+  },
+  colors: ["#4E096B", "#C15AED", "#AA13EB"],
+  series: [86, 96, 40],
+  labels: ["Total Sent", "Reached", "Opened"],
+  plotOptions: {
+    radialBar: {
+      track: {
+        margin: 8
+      }
+    }
+  }
+};
+(chart = new ApexCharts(document.querySelector("#dash-campaigns-chart2"), options)).render();
+
+// ----
+var options = {
+  chart: {
+    height: 320,
+    type: "radialBar"
+  },
+  colors: ["#4E096B", "#C15AED", "#AA13EB"],
+  series: [16, 26, 70],
+  labels: ["Total Sent", "Reached", "Opened"],
+  plotOptions: {
+    radialBar: {
+      track: {
+        margin: 8
+      }
+    }
+  }
+};
+(chart = new ApexCharts(document.querySelector("#dash-campaigns-chart3"), options)).render();
+
+var options = {
+  chart: {
+    height: 320,
+    type: "radialBar"
+  },
+  colors: ["#4E096B", "#C15AED", "#AA13EB"],
+  series: [46, 56, 70],
+  labels: ["Total Sent", "Reached", "Opened"],
+  plotOptions: {
+    radialBar: {
+      track: {
+        margin: 8
+      }
+    }
+  }
+};
+(chart = new ApexCharts(document.querySelector("#dash-campaigns-chart4"), options)).render();
+
+var options = {
+  chart: {
+    height: 320,
+    type: "radialBar"
+  },
+  colors: ["#4E096B", "#C15AED", "#AA13EB"],
+  series: [36, 66, 30],
+  labels: ["Total Sent", "Reached", "Opened"],
+  plotOptions: {
+    radialBar: {
+      track: {
+        margin: 8
+      }
+    }
+  }
+};
+(chart = new ApexCharts(document.querySelector("#dash-campaigns-chart5"), options)).render();
+
+
+var options = {
+  chart: {
+    height: 320,
+    type: "radialBar"
+  },
+  colors: ["#4E096B", "#C15AED", "#AA13EB"],
+  series: [56, 26, 10],
+  labels: ["Total Sent", "Reached", "Opened"],
+  plotOptions: {
+    radialBar: {
+      track: {
+        margin: 8
+      }
+    }
+  }
+};
+(chart = new ApexCharts(document.querySelector("#dash-campaigns-chart6"), options)).render();
+
+
+
+
 var chart;
 options = {
   chart: {
@@ -213,7 +311,7 @@ options = {
   markers: {
     size: 0
   },
-  colors: ["#0acf97", "#fa5c7c"],
+  colors: ["#AA13EB", "#fa5c7c"],
   yaxis: [{
     title: {
       text: "Revenue (USD)"
@@ -249,4 +347,4 @@ options = {
     }
   }]
 };
-(chart = new ApexCharts(document.querySelector("#dash-revenue-chart"), options)).render();
+(chart = new ApexCharts(document.querySelector("#dash-revenue-chart-2"), options)).render();

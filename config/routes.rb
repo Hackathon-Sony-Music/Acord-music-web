@@ -49,6 +49,10 @@ resources :dashboards do
     get :exercios_correto
     get :exercios_incorreto
     get :minhas_musicas
+    get :artistas
+    get :produtoras
+    get :hits
+    get :relatorios
   end
 end
 
