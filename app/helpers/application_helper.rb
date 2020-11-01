@@ -19,10 +19,8 @@ module ApplicationHelper
     if current_user.name.present?
       current_user.name
     else
-      # current_user.email
-      'Sony Music'
+      current_user.email
     end
-
   end
 
 end
