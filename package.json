@@ -1,6 +1,9 @@
 {
   "name": "AcordMusic",
   "private": true,
+  "scripts": {
+    "start": "bundle install & rails db:create & rails db:migratee & rails s"
+  },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
