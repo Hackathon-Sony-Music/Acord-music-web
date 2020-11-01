@@ -29,7 +29,6 @@ class RegistrosController < ApplicationController
   end
 
   def update_dados_registros
-    byebug
     current_user.update_attributes(registrations: !current_user.registrations)
     redirect_to '/'
   end
