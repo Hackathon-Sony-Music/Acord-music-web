@@ -1,172 +1,64 @@
-<!-- <div id="detached-topbar-placeholder"></div>
-
+<div id="detached-topbar-placeholder"></div>
 <div class="wrapper">
+
+  <div id="vertical-sidebar-placeholder"></div>
+  <div id="detached-sidebar-placeholder"></div>
+
+
+
+
+
   <div class="content-page">
     <div class="content">
 
       <div id="vertical-topbar-placeholder"></div>
       <div id="horizontal-topbar-placeholder"></div>
 
-      <div class="container-fluid mt-5">
+
+      <div class="container-fluid mt-3">
         <div class="row">
-          <div class="col-md-12 col-xl-3">
-            <img src="<%# asset_path 'macaco_2.svg' %>" style="margin-left: -19vh;margin-top: -14vh;">
-          </div>
+          <div class="col-sm-12">
 
+            <div class="card bg-primary">
+              <div class="card-body profile-user-box">
 
-          <div class="row col-md-12 col-xl-5 mlr">
-            <div class="col-12 row" >
-              <a href="/dashboards/exercios"  class="mlr">
-                <img src="<%# asset_path 'circul.svg' %>">
-                <label class="mlr" style="display: block;text-align: center;font-size: 27px;color: #000;">
-                  Introdução
-                </label>
-              </a>
-            </div>
+                <div class="row">
+                  <div class="col-sm-8">
+                    <div class="media">
+                      <span class="float-left m-2 mr-4"><img src="<%=root_url+asset_path('user_default.png')%>" style="height: 100px;" alt="" class="rounded-circle img-thumbnail"></span>
+                      <div class="media-body">
 
-            <div class="col-4" >
-              <a href="/dashboards/exercios"  class="mlr">
-                <img src="<%# asset_path 'circul.svg' %>">
-                <label class="mlr" style="display: block;text-align: center;font-size: 27px;color: #000;">
-                  Saudação
-                </label>
-              </a>
-            </div>
+                        <h4 class="mt-1 mb-1 text-white"><%= current_user.email%></h4>
+                        <p class="font-13 text-white-50">
+                          Cantor/Compositor</p>
 
-            <div class="col-4" >
-              <a href="/dashboards/exercios"  class="mlr">
-                <img src="<%# asset_path 'circul.svg' %>">
-                <label class="mlr" style="display: block;text-align: center;font-size: 27px;color: #000;">
-                  Familia
-                </label>
-              </a>
-            </div>
+                        <ul class="mb-0 list-inline text-light">
+                          <li class="list-inline-item mr-3">
+                            <h5 class="mb-1">25</h5>
+                            <p class="mb-0 font-13 text-white-50">Total De Visualizaçãoe</p>
+                          </li>
+                          <!-- <li class="list-inline-item">
+                            <h5 class="mb-1">5482</h5>
+                            <p class="mb-0 font-13 text-white-50">Number of Orders</p>
+                          </li> -->
+                        </ul>
+                      </div>
 
-            <div class="col-4" >
-              <a href="/dashboards/exercios"  class="mlr">
-                <img src="<%# asset_path 'circul.svg' %>">
-                <label class="mlr" style="display: block;text-align: center;font-size: 27px;color: #000;">
-                  Alimentos
-                </label>
-              </a>
-            </div>
-
-            <div class="col-4" >
-              <a href="/dashboards/exercios"  class="mlr">
-                <img src="<%# asset_path 'circul.svg' %>">
-                <label class="mlr" style="display: block;text-align: center;font-size: 27px;color: #000;">
-                  Escola
-                </label>
-              </a>
-            </div>
-
-            <div class="col-4" >
-              <a href="/dashboards/exercios"  class="mlr">
-                <img src="<%# asset_path 'circul.svg' %>">
-                <label class="mlr" style="display: block;text-align: center;font-size: 27px;color: #000;">
-                  Emoçōes
-                </label>
-              </a>
-            </div>
-
-            <div class="col-4" >
-              <a href="/dashboards/exercios"  class="mlr">
-                <img src="<%# asset_path 'circul.svg' %>">
-                <label class="mlr" style="display: block;text-align: center;font-size: 27px;color: #000;">
-                  Animais
-                </label>
-              </a>
-            </div>
-
-            <div class="col-4" >
-              <a href="/dashboards/exercios"  class="mlr">
-                <img src="<%# asset_path 'circul.svg' %>">
-                <label class="mlr" style="display: block;text-align: center;font-size: 27px;color: #000;">
-                  Direção
-                </label>
-              </a>
-            </div>
-
-            <div class="col-4" >
-              <a href="/dashboards/exercios"  class="mlr">
-                <img src="<%# asset_path 'circul.svg' %>">
-                <label class="mlr" style="display: block;text-align: center;font-size: 27px;color: #000;">
-                  Clima
-                </label>
-              </a>
-            </div>
-
-            <div class="col-4" >
-              <a href="/dashboards/exercios"  class="mlr">
-                <img src="<%# asset_path 'circul.svg' %>">
-                <label class="mlr" style="display: block;text-align: center;font-size: 27px;color: #000;">
-                  Saude
-                </label>
-              </a>
-            </div>
-
-
-          </div>
-
-          <div class="col-md-12 col-xl-4">
-            <div class="card">
-              <div class="card-body">
-                <div class="dropdown float-right">
-                  <a href="/dashboards/exercios" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
-                    <i class="mdi mdi-dots-vertical"></i>
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-right">
-
-                    <a href="javascript:void(0);" class="dropdown-item">Today</a>
-
-                    <a href="javascript:void(0);" class="dropdown-item">Yesterday</a>
-
-                    <a href="javascript:void(0);" class="dropdown-item">Last Week</a>
-
-                    <a href="javascript:void(0);" class="dropdown-item">Last Month</a>
+                    </div>
                   </div>
+
+
+                  <div class="col-sm-4">
+                    <div class="text-center mt-sm-0 mt-3 text-sm-right">
+                      <button type="button" class="btn btn-primary btn-block" style="width:8rem; border-radius: 32px;margin-left:auto;">
+                        <i class="mdi mdi-account-edit mr-1"></i>
+                        Editar
+                      </button>
+                    </div>
+                  </div>
+
                 </div>
 
-                <div style="text-align: center;">
-                  <h4 class="header-title mb-1">Progresso</h4>
-                </div>
-
-                <div class="col-12 row">
-                  <img src="<%# asset_path 'tesouro.svg' %>">
-                  <img src="<%# asset_path 'progresso.svg' %>" class="ml-2">
-                </div>
-
-                <div id="dash-campaigns-chart" class="apex-charts"></div>
-
-                <div class="row text-center mt-2">
-                  <div class="col-md-4">
-                    <i class="mdi mdi-send widget-icon rounded-circle bg-light-lighten text-muted"></i>
-                    <h3 class="font-weight-normal mt-3">
-                      <span>65</span>
-                    </h3>
-                    <p class="text-muted mb-0 mb-2">
-                      <i class="mdi mdi-checkbox-blank-circle text-warning"></i>
-                      Total Liçōes</p>
-                  </div>
-                  <div class="col-md-4">
-                    <i class="mdi mdi-flag-variant widget-icon rounded-circle bg-light-lighten text-muted"></i>
-                    <h3 class="font-weight-normal mt-3">
-                      <span>34</span>
-                    </h3>
-                    <p class="text-muted mb-0 mb-2">
-                      <i class="mdi mdi-checkbox-blank-circle text-primary"></i>
-                      Acertos</p>
-                  </div>
-                  <div class="col-md-4">
-                    <i class="mdi mdi-email-open widget-icon rounded-circle bg-light-lighten text-muted"></i>
-                    <h3 class="font-weight-normal mt-3">
-                      <span>15</span>
-                    </h3>
-                    <p class="text-muted mb-0 mb-2">
-                      <i class="mdi mdi-checkbox-blank-circle text-success"></i>
-                      Mesangens</p>
-                  </div>
-                </div>
 
               </div>
 
@@ -175,12 +67,414 @@
 
         </div>
 
+
+        <div class="row">
+          <div class="col-md-4">
+
+            <div class="card">
+              <div class="card-body">
+                <h4 class="header-title mt-0 mb-3">Imformaçoes pessoais</h4>
+                <p class="text-muted font-13">
+                  Gusttavo Lima, nome artístico de Nivaldo Batista Lima é um cantor, compositor, produtora musical, empresário brasileiro. Começou sua carreira aos sete anos de idade, tocando no Trio Remelexo, formado por seus irmãos mais velhos, Willian & Marcelo, e depois passou por uma dupla sertaneja chamada Gustavo & Alessandro.
+                </p>
+
+                <hr/>
+
+                <div class="text-left">
+                  <p class="text-muted">
+                    <strong>Full Name :</strong>
+                    <span class="ml-2">Michael A. Franklin</span></p>
+
+                  <p class="text-muted">
+                    <strong>Mobile :</strong>
+                    <span class="ml-2">(+12) 123 1234 567</span></p>
+
+                  <p class="text-muted">
+                    <strong>Email :</strong>
+                    <span class="ml-2">coderthemes@gmail.com</span></p>
+
+                  <p class="text-muted">
+                    <strong>Location :</strong>
+                    <span class="ml-2">USA</span></p>
+
+                  <p class="text-muted">
+                    <strong>Languages :</strong>
+                    <span class="ml-2">
+                      English, German, Spanish
+                    </span>
+                  </p>
+                  <p class="text-muted mb-0">
+                    <strong>Elsewhere :</strong>
+                    <a class="d-inline-block ml-2 text-muted" title="" data-placement="top" data-toggle="tooltip" href="" data-original-title="Facebook">
+                      <i class="mdi mdi-facebook"></i>
+                    </a>
+                    <a class="d-inline-block ml-2 text-muted" title="" data-placement="top" data-toggle="tooltip" href="" data-original-title="Twitter">
+                      <i class="mdi mdi-twitter"></i>
+                    </a>
+                    <a class="d-inline-block ml-2 text-muted" title="" data-placement="top" data-toggle="tooltip" href="" data-original-title="Skype">
+                      <i class="mdi mdi-skype"></i>
+                    </a>
+                  </p>
+
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="card text-white bg-info overflow-hidden">
+              <div class="card-body">
+                <div class="toll-free-box text-center">
+                  <h4>
+                    <i class="mdi mdi-deskphone"></i>
+                    Toll Free : 1-234-567-8901</h4>
+                </div>
+              </div>
+
+            </div>
+
+
+
+
+            <div class="card">
+              <div class="card-body">
+                <h4 class="header-title mb-3">Gravadoras</h4>
+
+                <div class="inbox-widget">
+                  <div class="inbox-item">
+                    <!-- <div class="inbox-item-img"><img src="assets/images/users/avatar-2.jpg" class="rounded-circle" alt=""></div> -->
+                    <p class="inbox-item-author">Tomaslau</p>
+                    <p class="inbox-item-text">I've finished it! See you so...</p>
+                    <p class="inbox-item-date">
+                      <a href="#" class="btn btn-sm btn-link text-info font-13">
+                        Visualizar
+                      </a>
+                    </p>
+                  </div>
+                  <div class="inbox-item">
+                    <!-- <div class="inbox-item-img"><img src="assets/images/users/avatar-3.jpg" class="rounded-circle" alt=""></div> -->
+                    <p class="inbox-item-author">Stillnotdavid</p>
+                    <p class="inbox-item-text">This theme is awesome!</p>
+                    <p class="inbox-item-date">
+                      <a href="#" class="btn btn-sm btn-link text-info font-13">
+                        Visualizar
+                      </a>
+                    </p>
+                  </div>
+                  <div class="inbox-item">
+                    <!-- <div class="inbox-item-img"><img src="assets/images/users/avatar-4.jpg" class="rounded-circle" alt=""></div> -->
+                    <p class="inbox-item-author">Kurafire</p>
+                    <p class="inbox-item-text">Nice to meet you</p>
+                    <p class="inbox-item-date">
+                      <a href="#" class="btn btn-sm btn-link text-info font-13">
+                        Visualizar
+                      </a>
+                    </p>
+                  </div>
+
+                  <div class="inbox-item">
+                    <!-- <div class="inbox-item-img"><img src="assets/images/users/avatar-5.jpg" class="rounded-circle" alt=""></div> -->
+                    <p class="inbox-item-author">Shahedk</p>
+                    <p class="inbox-item-text">Hey! there I'm available...</p>
+                    <p class="inbox-item-date">
+                      <a href="#" class="btn btn-sm btn-link text-info font-13">
+                        Visualizar
+                      </a>
+                    </p>
+                  </div>
+                  <div class="inbox-item">
+                    <!-- <div class="inbox-item-img"><img src="assets/images/users/avatar-6.jpg" class="rounded-circle" alt=""></div> -->
+                    <p class="inbox-item-author">Adhamdannaway</p>
+                    <p class="inbox-item-text">This theme is awesome!</p>
+                    <p class="inbox-item-date">
+                      <a href="#" class="btn btn-sm btn-link text-info font-13">
+                        Visualizar
+                      </a>
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+          <div class="col-md-8">
+
+
+            <div class="card">
+                <div class="card-body">
+
+                    <h4 class="header-title mb-3">Visualizaçãoe Semanal</h4>
+
+                    <!-- <div class="chart-content-bg">
+                        <div class="row text-center">
+                            <div class="col-md-6">
+                                <p class="text-muted mb-0 mt-3">Current Month</p>
+                                <h2 class="font-weight-normal mb-3">
+                                    <span>$42,025</span>
+                                </h2>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="text-muted mb-0 mt-3">Previous Month</p>
+                                <h2 class="font-weight-normal mb-3">
+                                    <span>$74,651</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div id="dash-revenue-chart" class="apex-charts"></div>
+
+                </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="card tilebox-one">
+                  <div class="card-body">
+                    <i class="dripicons-basket float-right text-muted"></i>
+                    <h6 class="text-muted text-uppercase mt-0">Musicas Subimetidas</h6>
+                    <h2 class="m-b-20">25</h2>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div class="col-sm-4">
+                <div class="card tilebox-one">
+                  <div class="card-body">
+                    <i class="dripicons-box float-right text-muted"></i>
+                    <h6 class="text-muted text-uppercase mt-0">Musicas Andamento</h6>
+                    <h2 class="m-b-20"><span>2</span></h2>
+
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div class="col-sm-4">
+                <div class="card tilebox-one">
+                  <div class="card-body">
+                    <i class="dripicons-jewel float-right text-muted"></i>
+                    <h6 class="text-muted text-uppercase mt-0">Musicas Produzidas</h6>
+                    <h2 class="m-b-20">10</h2>
+                  </div>
+
+                </div>
+              </div>
+
+
+            </div>
+
+
+            <div class="card">
+              <div class="card-body">
+                <h4 class="header-title mb-3">Minhas Musicas em destaque</h4>
+
+                <div class="table-responsive">
+                  <table class="table table-hover table-centered mb-0">
+                    <thead>
+                      <tr>
+                        <th>Nome</th>
+                        <th>Indentificação</th>
+                        <th>Visualizaçãoe</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>ASOS Ridley High Waist</td>
+                        <td>79.49</td>
+                        <td>
+                          <span class="badge badge-primary">82 Pcs</span></td>
+                      </tr>
+                      <tr>
+                        <td>Marco Lightweight Shirt</td>
+                        <td>128.50</td>
+                        <td>
+                          <span class="badge badge-primary">37 Pcs</span></td>
+                      </tr>
+                      <tr>
+                        <td>Half Sleeve Shirt</td>
+                        <td>39.99</td>
+                        <td>
+                          <span class="badge badge-primary">64 Pcs</span></td>
+                      </tr>
+                      <tr>
+                        <td>Lightweight Jacket</td>
+                        <td>20.00</td>
+                        <td>
+                          <span class="badge badge-primary">184 Pcs</span></td>
+                      </tr>
+                      <tr>
+                        <td>Marco Shoes</td>
+                        <td>28.49</td>
+                        <td>
+                          <span class="badge badge-primary">69 Pcs</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
       </div>
+
 
     </div>
 
+
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            2018 - 2019 © Hyper - Coderthemes.com
+          </div>
+          <div class="col-md-6">
+            <div class="text-md-right footer-links d-none d-md-block">
+              <a href="javascript: void(0);">About</a>
+              <a href="javascript: void(0);">Support</a>
+              <a href="javascript: void(0);">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
   </div>
+
+
+
+
 
 </div>
 
-<%# javascript_pack_tag 'dashboard.js' %> -->
+<div class="right-bar">
+
+  <div class="rightbar-title">
+    <a href="javascript:void(0);" class="right-bar-toggle float-right">
+      <i class="dripicons-cross noti-icon"></i>
+    </a>
+    <h5 class="m-0">Settings</h5>
+  </div>
+
+  <div class="slimscroll-menu rightbar-content">
+
+    <div class="p-1">
+      <div class="alert alert-primary" role="alert">
+        <strong>Customize
+        </strong>
+        the overall color scheme, layout, sidebar menu, etc. Note that, Hyper stores the preferences in local storage.
+      </div>
+    </div>
+
+
+    <h5 class="pl-2">Color Scheme</h5>
+    <hr class="mb-0"/>
+
+    <div class="p-2">
+      <div class="custom-control custom-switch mb-1">
+        <input type="radio" class="custom-control-input" name="color-scheme-mode" value="light" id="light-mode-check" checked="checked"/>
+        <label class="custom-control-label" for="light-mode-check">Light Mode</label>
+      </div>
+
+      <div class="custom-control custom-switch mb-1">
+        <input type="radio" class="custom-control-input" name="color-scheme-mode" value="dark" id="dark-mode-check"/>
+        <label class="custom-control-label" for="dark-mode-check">Dark Mode</label>
+      </div>
+    </div>
+
+    <h5 class="pl-2">Layout</h5>
+    <hr class="mb-0"/>
+
+    <div class="p-2">
+      <div class="custom-control custom-switch mb-1">
+        <input type="radio" class="custom-control-input" name="layout" value="vertical" id="vertical-check" checked="checked"/>
+        <label class="custom-control-label" for="vertical-check">Vertical Layout (Default)</label>
+      </div>
+
+      <div class="custom-control custom-switch mb-1">
+        <input type="radio" class="custom-control-input" name="layout" value="horizontal" id="horizontal-check"/>
+        <label class="custom-control-label" for="horizontal-check">Horizontal Layout</label>
+      </div>
+
+      <div class="custom-control custom-switch mb-1">
+        <input type="radio" class="custom-control-input" name="layout" value="detached" id="detached-check"/>
+        <label class="custom-control-label" for="detached-check">Detached Layout</label>
+      </div>
+    </div>
+
+    <h5 class="pl-2">Width</h5>
+    <hr class="mb-0"/>
+    <div class="p-2">
+      <div class="custom-control custom-switch mb-1">
+        <input type="radio" class="custom-control-input" name="width" value="fluid" id="fluid-check" checked="checked"/>
+        <label class="custom-control-label" for="fluid-check">Fluid</label>
+      </div>
+      <div class="custom-control custom-switch mb-1">
+        <input type="radio" class="custom-control-input" name="width" value="boxed" id="boxed-check"/>
+        <label class="custom-control-label" for="boxed-check">Boxed</label>
+      </div>
+    </div>
+
+    <h5 class="pl-2">Left Sidebar</h5>
+    <hr class="mb-0"/>
+
+    <div class="p-2">
+      <div class="custom-control custom-switch mb-1">
+        <input type="radio" class="custom-control-input" name="theme" value="default" id="default-check" checked="checked"/>
+        <label class="custom-control-label" for="default-check">Default</label>
+      </div>
+
+      <div class="custom-control custom-switch mb-1">
+        <input type="radio" class="custom-control-input" name="theme" value="light" id="light-check"/>
+        <label class="custom-control-label" for="light-check">Light</label>
+      </div>
+
+      <div class="custom-control custom-switch mb-3">
+        <input type="radio" class="custom-control-input" name="theme" value="dark" id="dark-check"/>
+        <label class="custom-control-label" for="dark-check">Dark</label>
+      </div>
+
+      <div class="custom-control custom-switch mb-1">
+        <input type="radio" class="custom-control-input" name="compact" value="fixed" id="fixed-check" checked="checked"/>
+        <label class="custom-control-label" for="fixed-check">Fixed</label>
+      </div>
+
+      <div class="custom-control custom-switch mb-1">
+        <input type="radio" class="custom-control-input" name="compact" value="condensed" id="condensed-check"/>
+        <label class="custom-control-label" for="condensed-check">Condensed</label>
+      </div>
+
+      <div class="custom-control custom-switch mb-1">
+        <input type="radio" class="custom-control-input" name="compact" value="scrollable" id="scrollable-check"/>
+        <label class="custom-control-label" for="scrollable-check">Scrollable</label>
+      </div>
+    </div>
+
+    <div class="p-2 text-center">
+      <button class="btn btn-primary btn-block" id="resetBtn">Reset to Default</button>
+    </div>
+  </div>
+</div>
+
+<div class="rightbar-overlay"></div>
+
+<%= javascript_pack_tag 'dashboard.js' %>

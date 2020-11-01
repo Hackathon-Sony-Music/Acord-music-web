@@ -48,6 +48,7 @@ resources :dashboards do
     get :exercios
     get :exercios_correto
     get :exercios_incorreto
+    get :minhas_musicas
   end
 end
 
