@@ -54,6 +54,9 @@ resources :dashboards do
     get :hits
     get :relatorios
     get :letras
+    get :artistas_produtara
+    get :producoes
+    get :relatorios_stream
   end
 end
 
