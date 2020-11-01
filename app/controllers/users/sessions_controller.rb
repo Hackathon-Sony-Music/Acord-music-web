@@ -18,7 +18,7 @@ class Users::SessionsController < Devise::SessionsController
     signed_out = (Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name))
 
     respond_to do |format|
-      format.html { redirect_to new_user_session_path, notice: 'Voçê saiu com Sucesso.' }
+      format.html { redirect_to new_user_session_path, notice: 'Você saiu com Sucesso.' }
       format.json { head :no_content }
     end
 
