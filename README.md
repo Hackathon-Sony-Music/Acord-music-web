@@ -38,7 +38,7 @@ Ambos o processos de instalacao pode ser feitos por este guia:
  
  - https://acord.digital/
  
-   Podendo fazer liguin com usuario admin:
+   Podendo fazer loguin com usuario admin:
     - email: editora@gmail.com
     - senha: 123123
     
