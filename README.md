@@ -1,9 +1,6 @@
-## Acord Music
+## Acord
 
-Acord Music e um software para aprendizagem de libras, utilizando uma metodologia de gamificação, 
-cheios de atividades interativas e descontraida para poder aumentar o maximo a capacidade de ensino.
-Ele possou um integração com uma IA, onde ele faz o procesarmento de video em tempo real, para poder 
-Validade se o gerto com a mao corresponde com a lição dada pelo app.
+Acord é uma plataforma de facilitação, promovendo a convergência entre um potencial artista, um profissional do ramo de produção musical e uma grande gravadora interessada no recrutamento de novos talentos.
 
 ## Desenvolvedores
 
@@ -11,6 +8,7 @@ Validade se o gerto com a mao corresponde com a lição dada pelo app.
 * Wilian Antunes
 * Omar
 * Victor Junior 
+* Victor Araujo 
 
 ## Ferramento utilizada no desenvolvimento
 
@@ -38,23 +36,11 @@ Ambos o processos de instalacao pode ser feitos por este guia:
 
  Projeto possui uma versao beta em desenvolvimento que ja pode ser acessada pelo link:
  
- - https://medeumsinal.herokuapp.com/dashboards/home
+ - https://acord.digital/
  
-   Podendo fazer liguin com usuario teste:
-    - email: teste@gmail.com
+   Podendo fazer liguin com usuario admin:
+    - email: editora@gmail.com
     - senha: 123123
     
-    Tento a funcionalidade de cadastro desponivel tambem caso queria fazer.
+    Tento a funcionalidade de cadastro desponivel tambem caso queria fazer. Diferenciando o fluxo entre Produtora e Artista.
 
-## Checklist das funcionalidade do app
-
-- [x] Estrutura base para desenvolvimento com todas as dependencias
-- [x] Pagina home com a apresentação do site
-- [x] Pagina do loguin para acessar o site com as credenciais 
-- [x] Pagina de cadastro para se registrar no site
-- [x] Pagina de atividade 
-- [x] Pagina de resposta da atividade
-- [ ] Pagina da comunidade
-- [ ] Pagina de perfil
-- [ ] Integração com a IA 
-- [ ] Funcionalidade para consumo da IA 
