@@ -10,7 +10,7 @@ Acord é uma plataforma de facilitação, promovendo a convergência entre um po
 * Victor Junior 
 * Victor Araujo 
 
-## Ferramento utilizada no desenvolvimento
+## Ferramentas utilizada no desenvolvimento
 
 Toda aplicaçao web foi desenvolvica com Ruby on rails.
 Para conseguir rodar esta aplicacao localmente e necessario fazer a instalacao das seguintes ferramentas.
@@ -42,5 +42,5 @@ Ambos o processos de instalacao pode ser feitos por este guia:
     - email: editora@gmail.com
     - senha: 123123
     
-    Tento a funcionalidade de cadastro desponivel tambem caso queria fazer. Diferenciando o fluxo entre Produtora e Artista.
+   Tendo a funcionalidade de cadastro disponivel tambem caso queira fazer. Diferenciando o fluxo entre Produtora e Artista.
 
